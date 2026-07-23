@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Blueprint Smiles</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="description" content="Learn how Blueprint Smiles supports dental practices across Atlanta through gratitude, growth, and accountability to deliver exceptional patient care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF7F1;
+    --cream-deep:#F3ECDF;
+    --teal:#1E4E49;
+    --teal-deep:#153936;
+    --sage:#AFC8B9;
+    --sage-tint:#E9F1EB;
+    --gold:#C9992B;
+    --charcoal:#26302D;
+    --white:#FFFFFF;
+    --max-w:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', sans-serif;
+    color:var(--charcoal);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    color:var(--teal-deep);
+    margin:0 0 0.5em 0;
+    line-height:1.15;
+  }
+  p{margin:0 0 1.2em 0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 24px;}
+  img{max-width:100%; display:block;}
+
+  /* Header (shared) */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,247,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(30,78,73,0.12);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px;
+    max-width:var(--max-w); margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.25rem;
+    color:var(--teal-deep);
+    text-decoration:none;
+  }
+  .brand-mark{
+    width:38px; height:38px;
+    border-radius:50%;
+    background:var(--teal);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:20px; height:20px;}
+  nav.links{display:flex; gap:28px; font-size:0.95rem; font-weight:500;}
+  nav.links a{text-decoration:none; color:var(--charcoal); opacity:0.8; transition:opacity 0.2s;}
+  nav.links a:hover{opacity:1; color:var(--teal);}
+  .nav-cta{
+    background:var(--teal); color:var(--white);
+    padding:10px 20px; border-radius:30px;
+    font-size:0.9rem; font-weight:600;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
+  .menu-toggle svg{width:24px; height:24px; color:var(--teal-deep);}
+
+  .smile-divider{
+    width:100%; height:48px; overflow:hidden; line-height:0;
+  }
+  .smile-divider svg{width:100%; height:100%; display:block;}
+
+  /* Page hero */
+  .page-hero{
+    padding:80px 0 56px;
+    text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold); font-weight:600;
+    margin-bottom:18px;
+  }
+  .page-hero h1{
+    font-size:clamp(2rem, 4.2vw, 3rem);
+    max-width:700px; margin:0 auto 18px;
+    font-weight:600;
+  }
+  .page-hero p{
+    max-width:600px; margin:0 auto;
+    font-size:1.1rem; color:#425049;
+  }
+
+  section{padding:72px 0;}
+
+  /* Story content */
+  .story{
+    max-width:760px; margin:0 auto;
+  }
+  .story p{
+    font-size:1.08rem; color:#333f38;
+  }
+  .story p:first-of-type::first-letter{
+    font-family:'Fraunces', serif;
+    font-size:3.4rem;
+    color:var(--teal);
+    float:left;
+    line-height:0.8;
+    padding-right:10px;
+    padding-top:6px;
+  }
+
+  /* Values strip */
+  .values-strip{
+    background:var(--sage-tint);
+  }
+  .values-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+  }
+  .value-card{
+    background:var(--white);
+    border-radius:16px;
+    padding:28px 24px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(30,78,73,0.06);
+  }
+  .value-card .mark{
+    width:44px; height:44px; margin:0 auto 16px;
+    border-radius:50%;
+    background:var(--teal);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .value-card .mark svg{width:20px; height:20px;}
+  .value-card h3{font-size:1.1rem; margin-bottom:8px;}
+  .value-card p{font-size:0.95rem; color:#4B5951; margin-bottom:0;}
+
+  /* CTA band */
+  .cta-band{
+    background:var(--teal); color:var(--white);
+    text-align:center;
+  }
+  .cta-band h2{color:var(--white); font-size:clamp(1.6rem, 3vw, 2.2rem);}
+  .cta-band p{color:#DCEAE4; max-width:520px; margin:0 auto 28px;}
+  .btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:0.98rem;
+    transition:transform 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:var(--gold); color:var(--teal-deep);}
+
+  footer{
+    background:var(--teal-deep); color:#CFE2DB;
+    padding:48px 0 32px; text-align:center; font-size:0.9rem;
+  }
+  footer .brand{color:var(--white); justify-content:center; margin-bottom:12px;}
+  footer p{color:#9FB9AF; margin-bottom:6px;}
+
+  @media (max-width:860px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .values-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 13c0 4 3.5 7 8 7s8-3 8-7" stroke="#FBF7F1" stroke-width="2" stroke-linecap="round"/><circle cx="8.5" cy="9" r="1.4" fill="#FBF7F1"/><circle cx="15.5" cy="9" r="1.4" fill="#FBF7F1"/></svg>
+      </span>
+      Blueprint Smiles
+    </a>
+    <nav class="links">
+      <a href="index.html#about">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="index.html#mission">Mission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">About Us</span>
+      <h1>The Story Behind Blueprint Smiles</h1>
+      <p>A doctor-led dental support organization built on gratitude, growth, and accountability, serving the greater Atlanta area.</p>
+    </div>
+  </section>
+
+  <div class="smile-divider">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,48 L0,48 Z" fill="#E9F1EB"/></svg>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="story">
+        <p>Blueprint Smiles is a doctor-led dental support organization dedicated to helping dental practices, professionals, and patients thrive throughout the greater Atlanta area. We were founded on a simple belief. When practices are supported well, clinicians can focus on what matters most, delivering exceptional patient care.</p>
+
+        <p>Our foundation rests on three core values, gratitude, growth, and accountability. These values guide every partnership we build and every decision we make, from how we support a practice's daily operations to how we treat the patients who walk through the door. By handling the operational side of dentistry, including staffing, scheduling, and practice management, we free up dentists and their teams to spend more time with patients and less time on administrative tasks.</p>
+
+        <p>Being doctor-led sets us apart. Our decisions are made by people who understand dentistry from the inside, not outside investors focused only on numbers. This means every practice we support keeps its clinical judgment and its focus on patients at the center of how it operates, even as we help it grow.</p>
+
+        <p>We are passionate about making dentistry accessible for everyone. Many people delay dental visits because of cost concerns or uncomfortable past experiences, and we believe that should never be the case. Through high-quality, affordable services, we work to remove the barriers that often keep people from getting the care they need. Alongside affordability, we focus on creating a welcoming, comfortable environment where patients feel at ease rather than anxious.</p>
+
+        <p>Continuous improvement is woven into everything we do. Rather than settling for how things have always been done, we regularly look for smarter ways to support our practices, simplify processes, and stay current with better approaches to dental care. This mindset helps every practice in our network keep moving forward instead of standing still.</p>
+
+        <p>Our commitment does not stop at patient care. We invest deeply in our team members, fostering a culture where work and life can truly thrive together. We understand that a supported, valued team is better equipped to deliver consistent, high-quality care, which is why we prioritize the wellbeing of the people behind every smile.</p>
+
+        <p>We are equally dedicated to supporting the local Atlanta community. We believe that healthier dental practices lead to healthier neighborhoods, and we take that responsibility seriously, building relationships that extend well beyond the dental chair.</p>
+
+        <p>Blueprint Smiles is redefining what modern dentistry can look like, one patient, one practice, and one smile at a time. We are proud to be doctor-led, community-focused, and committed to a better dental experience for everyone we serve across the greater Atlanta area.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-strip">
+    <div class="wrap">
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9Z" stroke="#FBF7F1" stroke-width="1.8"/></svg></div>
+          <h3>Gratitude</h3>
+          <p>A genuine appreciation for our patients, our teams, and the communities we serve.</p>
+        </div>
+        <div class="value-card">
+          <div class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 4 7-9" stroke="#FBF7F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Growth</h3>
+          <p>Helping practices and people move forward through steady, thoughtful progress.</p>
+        </div>
+        <div class="value-card">
+          <div class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke="#FBF7F1" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Accountability</h3>
+          <p>Standing behind our promises to patients, practices, and each other.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>See Our Mission in Action</h2>
+      <p>Discover how Blueprint Smiles is bringing better, more comfortable dental care to practices across Atlanta.</p>
+      <a href="index.html#mission" class="btn btn-gold">Visit Our Mission</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 13c0 4 3.5 7 8 7s8-3 8-7" stroke="#FBF7F1" stroke-width="2" stroke-linecap="round"/><circle cx="8.5" cy="9" r="1.4" fill="#FBF7F1"/><circle cx="15.5" cy="9" r="1.4" fill="#FBF7F1"/></svg>
+      </span>
+      Blueprint Smiles
+    </div>
+    <p>Doctor-led dental support for the greater Atlanta area.</p>
+    <p>&copy; 2026 Blueprint Smiles. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
